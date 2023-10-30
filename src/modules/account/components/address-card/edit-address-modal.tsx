@@ -135,20 +135,20 @@ const EditAddress: React.FC<EditAddressProps> = ({
             onClick={open}
           >
             <Edit size={16} />
-            Edit
+            Editar
           </button>
           <button
             className="text-small-regular text-gray-700 flex items-center gap-x-2"
             onClick={removeAddress}
           >
             <Trash />
-            Remove
+            Eliminar
           </button>
         </div>
       </div>
 
       <Modal isOpen={state} close={close}>
-        <Modal.Title>Edit address</Modal.Title>
+        <Modal.Title>Editar dirección</Modal.Title>
         <Modal.Body>
           <div className="grid grid-cols-1 gap-y-2">
             <div className="grid grid-cols-2 gap-x-2">
@@ -230,10 +230,10 @@ const EditAddress: React.FC<EditAddressProps> = ({
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={close}>
-            Cancel
+            Cancelar
           </Button>
           <Button onClick={submit} disabled={submitting}>
-            Save
+            Guardar
             {submitting && <Spinner />}
           </Button>
         </Modal.Footer>

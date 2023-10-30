@@ -87,7 +87,7 @@ const GiftCard: React.FC<GiftCardProps> = ({ cart }) => {
                 disabled={isLoading}
               >
                 <Trash size={16} />
-                <span className="sr-only">Remove gift card from order</span>
+                <span className="sr-only">Eliminar tarjeta de regalo del pedido</span>
               </button>
             </div>
           </div>
@@ -108,7 +108,7 @@ const GiftCard: React.FC<GiftCardProps> = ({ cart }) => {
                   disabled={isLoading}
                   isLoading={isLoading}
                 >
-                  Apply
+                  Aplicar
                 </Button>
               </div>
             </div>

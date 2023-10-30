@@ -53,7 +53,7 @@ const MainMenu = () => {
           >
             <Search size={24} />
             <span placeholder="Search products" className="text-base-regular">
-              Search products
+             Buscar productos
             </span>
           </button>
         )}
@@ -66,8 +66,8 @@ const MainMenu = () => {
                   className="flex items-center justify-between w-full"
                   onClick={close}
                 >
-                  <span className="sr-only">Go to Store</span>
-                  <span>Store</span>
+                  <span className="sr-only">Ir a la tienda</span>
+                  <span>Tienda</span>
                   <ChevronDown className="-rotate-90" />
                 </button>
               </Link>
@@ -82,7 +82,7 @@ const MainMenu = () => {
                         onClick={close}
                       >
                         <span className="sr-only">
-                          Go to {collection.title} collection
+                          Ir a los {collection.title} productos
                         </span>
                         <span>{collection.title}</span>
                         <ChevronDown className="-rotate-90" />

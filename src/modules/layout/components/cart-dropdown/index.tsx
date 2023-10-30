@@ -38,7 +38,7 @@ const CartDropdown = () => {
             className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border-x border-b border-gray-200 w-[382px] text-gray-900"
           >
             <div className="p-4 flex items-center justify-center">
-              <h3 className="text-large-semi">Shopping Bag</h3>
+              <h3 className="text-large-semi">Carro</h3>
             </div>
             {cart && items?.length ? (
               <>
@@ -86,7 +86,7 @@ const CartDropdown = () => {
                                 onClick={() => deleteItem(item.id)}
                               >
                                 <Trash size={14} />
-                                <span>Remove</span>
+                                <span>Eliminar</span>
                               </button>
                             </div>
                           </div>
@@ -109,7 +109,7 @@ const CartDropdown = () => {
                     </span>
                   </div>
                   <Link href="/cart" passHref>
-                    <Button>Go to bag</Button>
+                    <Button>Volver al carro</Button>
                   </Link>
                 </div>
               </>
@@ -119,12 +119,12 @@ const CartDropdown = () => {
                   <div className="bg-gray-900 text-small-regular flex items-center justify-center w-6 h-6 rounded-full text-white">
                     <span>0</span>
                   </div>
-                  <span>Your shopping bag is empty.</span>
+                  <span>Tu carro de compras esta vacio.</span>
                   <div>
                     <Link href="/store">
                       <>
-                        <span className="sr-only">Go to all products page</span>
-                        <Button onClick={close}>Explore products</Button>
+                        <span className="sr-only">Ir a la página de todos los productos</span>
+                        <Button onClick={close}>Explorar productos</Button>
                       </>
                     </Link>
                   </div>
