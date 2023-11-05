@@ -6,15 +6,12 @@ import Spinner from "@modules/common/icons/spinner"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
-import { FieldValues, useForm } from "react-hook-form"
+import { FieldValues, useForm, } from "react-hook-form"
+import { RegisterSchema } from "@lib/util/schemas"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
 
-interface RegisterCredentials extends FieldValues {
-  first_name: string
-  last_name: string
-  email: string
-  password: string
-  phone?: string
-}
+type RegisterCredentials = z.infer<typeof RegisterSchema>
 
 const Register = () => {
   const { loginView, refetchCustomer } = useAccount()
@@ -23,14 +20,14 @@ const Register = () => {
   const router = useRouter()
 
   const handleError = (e: Error) => {
-    setAuthError("An error occured. Please try again.")
+    setAuthError("A ocurrido un error. Por favor intente de nuevo.")
   }
 
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<RegisterCredentials>()
+  } = useForm<RegisterCredentials>({ resolver: zodResolver(RegisterSchema) })
 
   const onSubmit = handleSubmit(async (credentials) => {
     await medusaClient.customers
@@ -51,49 +48,54 @@ const Register = () => {
       )}
       <h1 className="text-large-semi uppercase mb-6">Conviértase en miembro de PCERION</h1>
       <p className="text-center text-base-regular text-gray-700 mb-4">
-      Cree su perfil de miembro de PCERIONy obtenga acceso a una plataforma de compras mejorada
+      Cree su perfil de miembro de PCERION y obtenga acceso a una plataforma de compras mejorada
         experiencia.
       </p>
       <form className="w-full flex flex-col" onSubmit={onSubmit}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
-            label="First name"
-            {...register("first_name", { required: "First name is required" })}
+            label="Nombre"
+            {...register("first_name", { required: "Se requiere su nombre" })}
             autoComplete="given-name"
             errors={errors}
           />
+          {errors.first_name && <span>{errors.first_name.message}</span>}
           <Input
-            label="Last name"
-            {...register("last_name", { required: "Last name is required" })}
+            label="Apellido"
+            {...register("last_name", { required: "Se requiere su apellido" })}
             autoComplete="family-name"
             errors={errors}
           />
+          {errors.last_name && <span>{errors.last_name.message}</span>}
           <Input
             label="Email"
-            {...register("email", { required: "Email is required" })}
+            {...register("email", { required: "Se requiere su email" })}
             autoComplete="email"
             errors={errors}
           />
+          {errors.email && <span>{errors.email.message}</span>}
           <Input
-            label="Phone"
+            label="Telefono"
             {...register("phone")}
             autoComplete="tel"
             errors={errors}
           />
+          {errors.phone && <span>{errors.phone.message}</span>}
           <Input
-            label="Password"
+            label="Contraseña"
             {...register("password", {
-              required: "Password is required",
+              required: "Se requiere una contraseña",
             })}
             type="password"
             autoComplete="new-password"
             errors={errors}
           />
+          {errors.password && <span>{errors.password.message}</span>}
         </div>
         {authError && (
           <div>
             <span className="text-rose-500 w-full text-small-regular">
-            Estas credenciales no coinciden con nuestros registros.
+            Alguno de los datos ingresados no son correctos
             </span>
           </div>
         )}
