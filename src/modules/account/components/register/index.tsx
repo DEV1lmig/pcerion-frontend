@@ -100,13 +100,13 @@ const Register = () => {
           </div>
         )}
         <span className="text-center text-gray-700 text-small-regular mt-6">
-        Al crear una cuenta, aceptas PCERION &apos;s{" "}
+        Al crear una cuenta, aceptas las {" "}
           <Link href="/content/privacy-policy" className="underline">
             Politica de privacidad
           </Link>{" "}
-          and{" "}
+          y{" "}
           <Link href="/content/terms-of-use" className="underline">
-            Terminos de uso
+            Terminos de uso de PCERION
           </Link>
           .
         </span>

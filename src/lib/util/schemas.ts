@@ -1,9 +1,10 @@
 import { z } from 'zod'
+import validator from 'validator'
 
 export const RegisterSchema = z.object({
-  first_name: z.string().min(2, { message: 'First name must be at least 2 characters long' }),
-  last_name: z.string().min(2, { message: 'Last name must be at least 2 characters long' }),
-  email: z.string().email({ message: 'Invalid email address' }),
-  password: z.string().min(6, { message: 'Password must be at least 6 characters long' }),
-  phone: z.string().min(10, { message: 'Phone number must be at least 10 characters long' }).optional(),
+  first_name: z.string().min(2, { message: 'Nombre debe de ser minimo 2 caracteres' }),
+  last_name: z.string().min(2, { message: 'Apellido debe ser de minimo 2 caracteres' }),
+  email: z.string().email({ message: 'El correo es invalido' }),
+  password: z.string().refine(validator.isStrongPassword, { message: 'La contraseña es muy debil' }),
+  phone: z.string().refine(validator.isMobilePhone, { message: 'Numero de telefono invalido' }),
 })
