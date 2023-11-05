@@ -59,28 +59,28 @@ const Register = () => {
             autoComplete="given-name"
             errors={errors}
           />
-          {errors.first_name && <span>{errors.first_name.message}</span>}
+          {errors.first_name && <span className="text-rose-500 w-full text-small-regular">{errors.first_name.message}</span>}
           <Input
             label="Apellido"
             {...register("last_name", { required: "Se requiere su apellido" })}
             autoComplete="family-name"
             errors={errors}
           />
-          {errors.last_name && <span>{errors.last_name.message}</span>}
+          {errors.last_name && <span className="text-rose-500 w-full text-small-regular">{errors.last_name.message}</span>}
           <Input
             label="Email"
             {...register("email", { required: "Se requiere su email" })}
             autoComplete="email"
             errors={errors}
           />
-          {errors.email && <span>{errors.email.message}</span>}
+          {errors.email && <span className="text-rose-500 w-full text-small-regular">{errors.email.message}</span>}
           <Input
             label="Telefono"
             {...register("phone")}
             autoComplete="tel"
             errors={errors}
           />
-          {errors.phone && <span>{errors.phone.message}</span>}
+          {errors.phone && <span className="text-rose-500 w-full text-small-regular">{errors.phone.message}</span>}
           <Input
             label="Contraseña"
             {...register("password", {
@@ -90,7 +90,7 @@ const Register = () => {
             autoComplete="new-password"
             errors={errors}
           />
-          {errors.password && <span>{errors.password.message}</span>}
+          {errors.password && <span className="text-rose-500 w-full text-small-regular">{errors.password.message}</span>}
         </div>
         {authError && (
           <div>
