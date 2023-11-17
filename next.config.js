@@ -17,7 +17,8 @@ module.exports = withStoreConfig({
       "localhost",
       "medusa-server-testing.s3.amazonaws.com",
       "unsplash.com",
-      "pcerion-backend-production.up.railway.app"
+      "pcerion-backend-production.up.railway.app",
+      "pcerion-s3.s3.us-east-1.amazonaws.com"
     ],
   },
 })
