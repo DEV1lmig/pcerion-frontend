@@ -21,7 +21,8 @@ const CartDropdown = () => {
     <div className="h-full z-50" onMouseEnter={open} onMouseLeave={close}>
       <Popover className="relative h-full">
         <Popover.Button className="h-full">
-          <Link href="/cart">{`My Bag (${totalItems})`}</Link>
+        <Link href="/cart">{`Mi Bolsa (${totalItems})`}</Link>
+
         </Popover.Button>
         <Transition
           show={state}
