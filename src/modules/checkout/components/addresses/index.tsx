@@ -88,7 +88,7 @@ const Addresses = () => {
                     )}
                   </div>
                   <div>
-                    <button onClick={setEdit}>Edit</button>
+                    <button onClick={setEdit}>Editar</button>
                   </div>
                 </div>
               </div>

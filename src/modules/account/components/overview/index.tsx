@@ -28,7 +28,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                 <>
                   <div className="flex items-center gap-x-2">
                     <User size={16} />
-                    <span>Perfile</span>
+                    <span>Perfil</span>
                   </div>
                   <ChevronDown className="transform -rotate-90" />
                 </>
