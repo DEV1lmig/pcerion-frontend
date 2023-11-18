@@ -6,7 +6,7 @@ const PaymentTest = () => {
       <div className="flex items-center gap-x-2 bg-yellow-100 w-full p-2">
         <Alert size={16} className="text-yellow-700" />
         <span className="text-small-regular text-yellow-700">
-          <span className="font-semibold">Attention:</span> For testing purposes
+          <span className="font-semibold">Atención:</span> Para propositos de prueba
           only.
         </span>
       </div>

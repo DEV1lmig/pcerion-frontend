@@ -99,27 +99,27 @@ const MainMenu = () => {
           <div className="flex flex-col gap-y-8 text-small-regular">
             {!customer ? (
               <div className="flex flex-col gap-y-4">
-                <span className="text-gray-700 uppercase">Account</span>
+                <span className="text-gray-700 uppercase">Cuenta</span>
                 <Link href={`/account/login`} passHref>
                   <button
                     className="flex items-center justify-between border-b border-gray-200 py-2 w-full"
                     onClick={close}
                   >
-                    <span className="sr-only">Go to sign in page</span>
-                    <span className="normal-case">Sign in</span>
+                    <span className="sr-only">Ir a la página de inicio de sesión</span>
+                    <span className="normal-case">Iniciar sesión</span>
                     <ChevronDown className="-rotate-90" />
                   </button>
                 </Link>
               </div>
             ) : (
               <div className="flex flex-col gap-y-4">
-                <span className="text-gray-700 uppercase">Signed in as</span>
+                <span className="text-gray-700 uppercase">Iniciar sesión como</span>
                 <Link href={`/account`} passHref>
                   <button
                     className="flex items-center justify-between border-b border-gray-200 py-2 w-full"
                     onClick={close}
                   >
-                    <span className="sr-only">Go to account page</span>
+                    <span className="sr-only">Ir a la página de la cuenta</span>
                     <span className="normal-case">{customer.email}</span>
                     <ChevronDown className="-rotate-90" />
                   </button>
@@ -133,12 +133,12 @@ const MainMenu = () => {
                 onClick={setScreenCountry}
               >
                 <span className="sr-only">
-                  Click to select shipping country
+                Haga clic para seleccionar el país de envío
                 </span>
                 <div className="flex items-center gap-x-2">
                   <ReactCountryFlag countryCode={countryCode || "us"} svg />
                   <span className="normal-case">
-                    Shipping to{" "}
+                  Embarcar hacia{" "}
                     {countries?.find((c) => c.country === countryCode)?.label}
                   </span>
                 </div>

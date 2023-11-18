@@ -25,7 +25,7 @@ const OrderSummary = ({ order }: OrderSummaryProps) => {
         <div className="flex flex-col gap-y-1">
           {order.discount_total > 0 && (
             <div className="flex items-center justify-between">
-              <span>Discount</span>
+              <span>Descuento</span>
               <span>- {getAmount(order.discount_total)}</span>
             </div>
           )}
