@@ -28,7 +28,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                 <>
                   <div className="flex items-center gap-x-2">
                     <User size={16} />
-                    <span>Perfile</span>
+                    <span>Perfil</span>
                   </div>
                   <ChevronDown className="transform -rotate-90" />
                 </>
@@ -90,7 +90,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
               </div>
 
               <div className="flex flex-col gap-y-4">
-                <h3 className="text-large-semi">Addresses</h3>
+                <h3 className="text-large-semi">Direcciones</h3>
                 <div className="flex items-end gap-x-2">
                   <span className="text-3xl-semi leading-none">
                     {customer?.shipping_addresses?.length || 0}

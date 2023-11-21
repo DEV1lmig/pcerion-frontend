@@ -9,7 +9,7 @@ const EmptyCartMessage = () => {
         el siguiente enlace para comenzar a explorar nuestros productos.
       </p>
       <div>
-        <UnderlineLink href="/store">Explore products</UnderlineLink>
+        <UnderlineLink href="/store">Explorar los productos</UnderlineLink>
       </div>
     </div>
   )

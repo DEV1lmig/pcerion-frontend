@@ -62,7 +62,7 @@ const FooterNav = () => {
           )}
           {collections && (
             <div className="flex flex-col gap-y-2">
-              <span className="text-base-semi">Collections</span>
+              <span className="text-base-semi">Colecciones</span>
               <ul
                 className={clsx("grid grid-cols-1 gap-2", {
                   "grid-cols-2": (collections?.length || 0) > 3,
@@ -77,7 +77,7 @@ const FooterNav = () => {
             </div>
           )}
           <div className="flex flex-col gap-y-2">
-            <span className="text-base-semi">Medusa</span>
+            <span className="text-base-semi"></span> 
             <ul className="grid grid-cols-1 gap-y-2">
               <li>
                 <a
@@ -94,7 +94,7 @@ const FooterNav = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Documentation
+                  Documentación
                 </a>
               </li>
               <li>
@@ -103,7 +103,7 @@ const FooterNav = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Source code
+                  Código fuente
                 </a>
               </li>
             </ul>

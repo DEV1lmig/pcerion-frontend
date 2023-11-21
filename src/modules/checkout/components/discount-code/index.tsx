@@ -91,13 +91,13 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
   return (
     <div className="w-full bg-white flex flex-col">
       <div className="mb-4">
-        <h3 className="text-base-semi">Discount</h3>
+        <h3 className="text-base-semi">Descuento</h3>
       </div>
       <div className="text-small-regular">
         {appliedDiscount ? (
           <div className="flex items-center justify-between">
             <div>
-              <span>Code: </span>
+              <span>Código: </span>
               <span className="font-semibold">{appliedDiscount}</span>
             </div>
             <div>
@@ -107,7 +107,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 disabled={isLoading}
               >
                 <Trash size={16} />
-                <span className="sr-only">Remove gift card from order</span>
+                <span className="sr-only">Remover la git card de la orden:</span>
               </button>
             </div>
           </div>
@@ -127,7 +127,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                   disabled={isLoading}
                   isLoading={isLoading}
                 >
-                  Apply
+                  Aplicar
                 </Button>
               </div>
             </div>

@@ -5,7 +5,7 @@ const SignInPrompt = () => {
   return (
     <div className="bg-white flex items-start justify-between">
       <div>
-        <h2 className="text-xl-semi">Tienes una cuenta?</h2>
+        <h2 className="text-xl-semi">¿Tienes una cuenta?</h2>
         <p className="text-base-regular text-gray-700 mt-2">
          Ingresa para una mejor experiencia.
         </p>
