@@ -10,15 +10,15 @@ async function getOrder(id: string) {
   const res = await medusaRequest("GET", `/orders/${id}`)
 
   if (!res.ok) {
-    throw new Error(`Failed to fetch order: ${id}`)
+    throw new Error(`Error en ordenar: ${id}`)
   }
 
   return res.body
 }
 
 export const metadata: Metadata = {
-  title: "Order Confirmed",
-  description: "You purchase was successful",
+  title: "Orden confimada",
+  description: "Su compra ha sido exitosa",
 }
 
 export default async function CollectionPage({ params }: Props) {
