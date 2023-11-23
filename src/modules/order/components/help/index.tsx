@@ -5,7 +5,7 @@ const Help = () => {
 
   const handleWhatsAppRedirect = () => {
     // Replace '1234567890' with the actual WhatsApp number
-    window.location.href = 'https://wa.me/1234567890';
+    window.location.href = 'https://wa.me/573169069591';
   };
   
 
@@ -13,11 +13,6 @@ const Help = () => {
     <div>
       <h2 className="text-base-semi">¿Necesitas ayuda?</h2>
       <div className="text-base-regular my-2">
-        {/* Your contact page content here */}
-        <h1>Contact Page</h1>
-        <p>Feel free to reach out to us!</p>
-    
-        {/* WhatsApp button */}
         <button onClick={handleWhatsAppRedirect}>WhatsApp</button>
       </div>
     </div>
