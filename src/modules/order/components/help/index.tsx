@@ -12,7 +12,7 @@ const Help = () => {
   return (
     <div>
       <h2 className="text-base-semi">¿Necesitas ayuda?</h2>
-      <div className="p-4 text-white w-36 rounded-md bg-green-500">
+      <div className="p-4 text-white w-44 rounded-md bg-green-500">
         <div className="cursor-pointer" onClick={handleWhatsAppRedirect}>Escribenos al WhatsApp</div>
       </div>
     </div>
