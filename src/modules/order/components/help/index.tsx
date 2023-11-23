@@ -2,17 +2,23 @@ import Link from "next/link"
 import React from "react"
 
 const Help = () => {
+
+  const handleWhatsAppRedirect = () => {
+    // Replace '1234567890' with the actual WhatsApp number
+    window.location.href = 'https://wa.me/1234567890';
+  };
+  
+
   return (
     <div>
       <h2 className="text-base-semi">¿Necesitas ayuda?</h2>
       <div className="text-base-regular my-2">
-        <ul className="gap-y-2 flex flex-col">
-          <li>
-            <Link href="/contact">
-              Contacto
-            </Link>
-          </li>
-        </ul>
+        {/* Your contact page content here */}
+        <h1>Contact Page</h1>
+        <p>Feel free to reach out to us!</p>
+    
+        {/* WhatsApp button */}
+        <button onClick={handleWhatsAppRedirect}>WhatsApp</button>
       </div>
     </div>
   )
