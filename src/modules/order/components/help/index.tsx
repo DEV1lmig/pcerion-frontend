@@ -13,7 +13,7 @@ const Help = () => {
     <div>
       <h2 className="text-base-semi">¿Necesitas ayuda?</h2>
       <div className="p-4 text-white w-36 rounded-md bg-green-500">
-        <div className="cursor-pointer w-10" onClick={handleWhatsAppRedirect}>Escribenos al WhatsApp</div>
+        <div className="cursor-pointer" onClick={handleWhatsAppRedirect}>Escribenos al WhatsApp</div>
       </div>
     </div>
   )
